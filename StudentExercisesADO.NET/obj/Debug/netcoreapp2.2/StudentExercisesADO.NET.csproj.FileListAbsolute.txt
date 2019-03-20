@@ -1,0 +1,11 @@
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\bin\Debug\netcoreapp2.2\StudentExercisesADO.NET.deps.json
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\bin\Debug\netcoreapp2.2\StudentExercisesADO.NET.runtimeconfig.json
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\bin\Debug\netcoreapp2.2\StudentExercisesADO.NET.runtimeconfig.dev.json
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\bin\Debug\netcoreapp2.2\StudentExercisesADO.NET.dll
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\bin\Debug\netcoreapp2.2\StudentExercisesADO.NET.pdb
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.csprojAssemblyReference.cache
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.csproj.CoreCompileInputs.cache
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.AssemblyInfoInputs.cache
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.AssemblyInfo.cs
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.dll
+C:\Users\HunterMetts\backendWorkspace\studentExercises\StudentExercisesADO.NET\StudentExercisesADO.NET\obj\Debug\netcoreapp2.2\StudentExercisesADO.NET.pdb
