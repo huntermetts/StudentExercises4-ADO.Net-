@@ -71,6 +71,25 @@ namespace StudentExercisesADO.NET
             Console.ReadKey();
 
             Console.WriteLine("");
+
+            /*
+             Getting all the instructors with their cohort
+             (using the "GetAllInstructorsWithCohort()" function defined in "Repository" file)
+            */
+
+            List<Instructor> instructors = repository.GetAllInstructorsWithCohort();
+            Console.WriteLine("All of the instructors with their cohorts are:");
+
+            foreach (Instructor instructor in instructors)
+            {
+                Console.WriteLine($"The instructors name is {instructor.FirstName} {instructor.LastName} " +
+                    $"and the cohort is {instructor.CohortName}");
+            }
+            /*
+          
+            */
+
+            Console.ReadKey();
         }
     }
 }

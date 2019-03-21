@@ -133,6 +133,57 @@ namespace StudentExercisesADO.NET
             }
         }
 
+        /*
+       Get all instructors with their cohort 
+      */
+        public List<Instructor> GetAllInstructorsWithCohort()
+        {
+
+            using (SqlConnection conn = Connection)
+            {
+
+                conn.Open();
+
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = "SELECT FirstName, LastName, cohort.[name] FROM Instructor " +
+                        "LEFT JOIN Cohort " +
+                        "ON Instructor.CohortId = Cohort.Id";
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    List<Instructor> instructors = new List<Instructor>();
+
+                    while (reader.Read())
+                    {
+
+                        
+                        int instructorFirstNameColumnPosition = reader.GetOrdinal("FirstName");
+                        int instructorLastNameColumnPosition = reader.GetOrdinal("LastName");
+                        int cohortNameColumnPosition = reader.GetOrdinal("name");
+
+                        
+                        string FirstNameValue = reader.GetString(instructorFirstNameColumnPosition);
+                        string LastNameValue = reader.GetString(instructorLastNameColumnPosition);
+                        string cohortNameValue = reader.GetString(cohortNameColumnPosition);
+
+                        Instructor instructor = new Instructor
+                        {
+                            
+                            FirstName = FirstNameValue,
+                            LastName = LastNameValue,
+                            CohortName = cohortNameValue
+                        };
+
+                        instructors.Add(instructor);
+                    }
+
+                    reader.Close();
+                    return instructors;
+                }
+            }
+        }
 
 
     }
