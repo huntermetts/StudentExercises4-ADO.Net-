@@ -17,9 +17,11 @@ namespace StudentExercisesADO.NET
                 return new SqlConnection(_connectionString);
             }
         }
-        
 
 
+        /*
+         Get all exercises
+        */
         public List<Exercise> GetAllExercises()
         {
          
@@ -63,7 +65,58 @@ namespace StudentExercisesADO.NET
                 }
             }
         }
-     }
+
+
+        /*
+         Get all exercises where the language is Javascript 
+        */
+        public List<Exercise> GetAllJavascriptExercises()
+        {
+
+            using (SqlConnection conn = Connection)
+            {
+
+                conn.Open();
+
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = "SELECT Id, [Name], [Language] " +
+                        "FROM Exercise " +
+                        "WHERE CONVERT(VARCHAR, [Language])= 'Javascript'; ";
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    List<Exercise> exercises = new List<Exercise>();
+
+                    while (reader.Read())
+                    {
+
+                        int idColumnPosition = reader.GetOrdinal("Id");
+
+                        int idValue = reader.GetInt32(idColumnPosition);
+                        int exerciseNameColumnPosition = reader.GetOrdinal("name");
+                        int exerciseLanguageColumnPosition = reader.GetOrdinal("language");
+                        string exerciseNameValue = reader.GetString(exerciseNameColumnPosition);
+                        string exerciseLanguageValue = reader.GetString(exerciseLanguageColumnPosition);
+
+                        Exercise exercise = new Exercise
+                        {
+                            Id = idValue,
+                            Name = exerciseNameValue,
+                            Language = exerciseLanguageValue
+                        };
+
+                        exercises.Add(exercise);
+                    }
+
+                    reader.Close();
+                    return exercises;
+                }
+            }
+        }
+
+    }
 }
     
     
