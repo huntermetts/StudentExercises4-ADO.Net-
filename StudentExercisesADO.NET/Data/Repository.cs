@@ -116,6 +116,25 @@ namespace StudentExercisesADO.NET
             }
         }
 
+        /*
+        Get all exercises where the language is Javascript 
+       */
+        public void addExercise(Exercise exercise)
+        {
+            using (SqlConnection conn = Connection)
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    // More string interpolation
+                    cmd.CommandText = $"INSERT INTO Exercise (Name, Language) Values ('{exercise.Name}', '{exercise.Language}')";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
     }
 }
     
